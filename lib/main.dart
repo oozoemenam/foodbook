@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodbook/home.dart';
 import 'package:foodbook/theme.dart';
 
 void main() {
@@ -11,14 +12,10 @@ class Foodbook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = FoodbookTheme.dark();
-    // TODO: Apply Home widget
     return MaterialApp(
-      title: 'Foodbook',
       theme: theme,
-      home: Scaffold(
-        appBar: AppBar(title: Text('Foodbook', style: theme.textTheme.titleLarge,)),
-        body: Center(child: Text('Let\'s get cooking!', style: theme.textTheme.displayLarge,)),
-      )
+      title: 'Foodbook',
+      home: const Home(),
     );
   }
 
