@@ -17,4 +17,6 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Screenshots
 
-<img src="./assets/Screenshot_DarkMode.png" alt="screenshot" width="300"/>
+<img src="./assets/Card1.png" alt="screenshot" width="300"/>
+<img src="./assets/Card2.png" alt="screenshot" width="300"/>
+<img src="./assets/Card3.png" alt="screenshot" width="300"/>

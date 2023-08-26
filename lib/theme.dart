@@ -3,6 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class FoodbookTheme {
   static TextTheme lightTextTheme = TextTheme(
+    bodyMedium: GoogleFonts.openSans(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w400,
+      color: Colors.black,
+    ),
     bodyLarge: GoogleFonts.openSans(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
@@ -31,6 +36,11 @@ class FoodbookTheme {
   );
 
   static TextTheme darkTextTheme = TextTheme(
+    bodyMedium: GoogleFonts.openSans(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w400,
+      color: Colors.white,
+    ),
     bodyLarge: GoogleFonts.openSans(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
