@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FoodbookTheme {
+class PlatemateTheme {
   static TextTheme lightTextTheme = TextTheme(
     bodyMedium: GoogleFonts.openSans(
       fontSize: 14.0,

@@ -42,7 +42,7 @@ class Card3 extends StatelessWidget {
                   const SizedBox(height: 8,),
                   Text(
                     'Recipe Trends',
-                    style: FoodbookTheme.darkTextTheme.displayMedium,
+                    style: PlatemateTheme.darkTextTheme.displayMedium,
                   ),
                   const SizedBox(height: 30,)
                 ],
@@ -57,7 +57,7 @@ class Card3 extends StatelessWidget {
                   Chip(
                     label: Text(
                       'Healthy',
-                      style: FoodbookTheme.darkTextTheme.bodyLarge,
+                      style: PlatemateTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                     onDeleted: () {
@@ -67,7 +67,7 @@ class Card3 extends StatelessWidget {
                   Chip(
                     label: Text(
                       'Vegan',
-                      style: FoodbookTheme.darkTextTheme.bodyLarge,
+                      style: PlatemateTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                     onDeleted: () {
@@ -77,42 +77,42 @@ class Card3 extends StatelessWidget {
                   Chip(
                     label: Text(
                       'Carrots',
-                      style: FoodbookTheme.darkTextTheme.bodyLarge,
+                      style: PlatemateTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Greens',
-                      style: FoodbookTheme.darkTextTheme.bodyLarge,
+                      style: PlatemateTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Wheat',
-                      style: FoodbookTheme.darkTextTheme.bodyLarge,
+                      style: PlatemateTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Pescetarian',
-                      style: FoodbookTheme.darkTextTheme.bodyLarge,
+                      style: PlatemateTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Mint',
-                      style: FoodbookTheme.darkTextTheme.bodyLarge,
+                      style: PlatemateTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Lemongrass',
-                      style: FoodbookTheme.darkTextTheme.bodyLarge,
+                      style: PlatemateTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),

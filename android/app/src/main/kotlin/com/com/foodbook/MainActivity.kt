@@ -1,4 +1,4 @@
-package com.com.foodbook
+package com.com.platemate
 
 import io.flutter.embedding.android.FlutterActivity
 

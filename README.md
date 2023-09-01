@@ -1,6 +1,7 @@
-# foodbook
+# Platemate
 
-A new Flutter project.
+A social recipe app to keep track of dishes, and share with friends.
+
 
 ## Getting Started
 

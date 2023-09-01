@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:foodbook/widgets/card1.dart';
-import 'package:foodbook/widgets/card2.dart';
-import 'package:foodbook/widgets/card3.dart';
+import 'package:platemate/widgets/card1.dart';
+import 'package:platemate/widgets/card2.dart';
+import 'package:platemate/widgets/card3.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Foodbook',
+          'Platemate',
           style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
