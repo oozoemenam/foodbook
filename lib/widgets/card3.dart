@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:foodbook/theme.dart';
+import '../theme.dart';
 
 class Card3 extends StatelessWidget {
   const Card3({super.key});
