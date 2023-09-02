@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'screens/explore_screen.dart';
-import 'widgets/card2.dart';
-import 'widgets/card3.dart';
+import 'screens/recipes_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -12,10 +11,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  static List<Widget> pages = <Widget>[
-    // const Card1(),
+  static List<Widget> screens = <Widget>[
     ExploreScreen(),
-    // const Card2(),
+    RecipesScreen(),
     // const Card3(),
     Container(color: Colors.blue),
   ];
@@ -31,7 +29,7 @@ class _HomeState extends State<Home> {
           style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
-      body: pages[_selectedIndex],
+      body: screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
         currentIndex: _selectedIndex,

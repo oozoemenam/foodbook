@@ -22,3 +22,4 @@ samples, guidance on mobile development, and a full API reference.
 <img src="./assets/S1.png" alt="screenshot" width="300"/>
 <img src="./assets/S2.png" alt="screenshot" width="300"/>
 <img src="./assets/S3.png" alt="screenshot" width="300"/>
+<img src="./assets/S4.png" alt="screenshot" width="300"/>
