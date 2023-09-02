@@ -42,12 +42,16 @@ class Card3 extends StatelessWidget {
                     color: Colors.white,
                     size: 40,
                   ),
-                  const SizedBox(height: 8,),
+                  const SizedBox(
+                    height: 8,
+                  ),
                   Text(
                     'Recipe Trends',
-                    style: PlatemateTheme.darkTextTheme.displayMedium,
+                    style: SocialRecipeAppTheme.darkTextTheme.displayMedium,
                   ),
-                  const SizedBox(height: 30,)
+                  const SizedBox(
+                    height: 30,
+                  )
                 ],
               ),
             ),
@@ -60,7 +64,7 @@ class Card3 extends StatelessWidget {
                   Chip(
                     label: Text(
                       'Healthy',
-                      style: PlatemateTheme.darkTextTheme.bodyLarge,
+                      style: SocialRecipeAppTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                     onDeleted: () {
@@ -70,7 +74,7 @@ class Card3 extends StatelessWidget {
                   Chip(
                     label: Text(
                       'Vegan',
-                      style: PlatemateTheme.darkTextTheme.bodyLarge,
+                      style: SocialRecipeAppTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                     onDeleted: () {
@@ -80,42 +84,42 @@ class Card3 extends StatelessWidget {
                   Chip(
                     label: Text(
                       'Carrots',
-                      style: PlatemateTheme.darkTextTheme.bodyLarge,
+                      style: SocialRecipeAppTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Greens',
-                      style: PlatemateTheme.darkTextTheme.bodyLarge,
+                      style: SocialRecipeAppTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Wheat',
-                      style: PlatemateTheme.darkTextTheme.bodyLarge,
+                      style: SocialRecipeAppTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Pescetarian',
-                      style: PlatemateTheme.darkTextTheme.bodyLarge,
+                      style: SocialRecipeAppTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Mint',
-                      style: PlatemateTheme.darkTextTheme.bodyLarge,
+                      style: SocialRecipeAppTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Lemongrass',
-                      style: PlatemateTheme.darkTextTheme.bodyLarge,
+                      style: SocialRecipeAppTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),

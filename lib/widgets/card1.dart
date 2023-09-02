@@ -31,13 +31,13 @@ class Card1 extends StatelessWidget {
         children: [
           Text(
             category,
-            style: PlatemateTheme.darkTextTheme.bodyLarge,
+            style: SocialRecipeAppTheme.darkTextTheme.bodyLarge,
           ),
           Positioned(
             top: 20,
             child: Text(
               title,
-              style: PlatemateTheme.darkTextTheme.displayMedium,
+              style: SocialRecipeAppTheme.darkTextTheme.displayMedium,
             ),
           ),
           Positioned(
@@ -45,7 +45,7 @@ class Card1 extends StatelessWidget {
             right: 0,
             child: Text(
               description,
-              style: PlatemateTheme.darkTextTheme.bodyLarge,
+              style: SocialRecipeAppTheme.darkTextTheme.bodyLarge,
             ),
           ),
           Positioned(
@@ -53,7 +53,7 @@ class Card1 extends StatelessWidget {
             right: 0,
             child: Text(
               chef,
-              style: PlatemateTheme.darkTextTheme.bodyLarge,
+              style: SocialRecipeAppTheme.darkTextTheme.bodyLarge,
             ),
           ),
         ],

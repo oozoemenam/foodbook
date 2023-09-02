@@ -1,4 +1,4 @@
-# Platemate
+# SocialRecipeApp
 
 A social recipe app to keep track of dishes, and share with friends.
 

@@ -4,18 +4,18 @@ import 'home.dart';
 import 'theme.dart';
 
 void main() {
-  runApp(const Platemate());
+  runApp(const SocialRecipeApp());
 }
 
-class Platemate extends StatelessWidget {
-  const Platemate({super.key});
+class SocialRecipeApp extends StatelessWidget {
+  const SocialRecipeApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final theme = PlatemateTheme.dark();
+    final theme = SocialRecipeAppTheme.dark();
     return MaterialApp(
       theme: theme,
-      title: 'Platemate',
+      title: 'SocialRecipeApp',
       home: const Home(),
     );
   }

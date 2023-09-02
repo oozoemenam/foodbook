@@ -38,11 +38,11 @@ class _AuthorCardState extends State<AuthorCard> {
               children: [
                 Text(
                   widget.authorName,
-                  style: PlatemateTheme.lightTextTheme.bodyLarge,
+                  style: SocialRecipeAppTheme.lightTextTheme.bodyLarge,
                 ),
                 Text(
                   widget.title,
-                  style: PlatemateTheme.lightTextTheme.bodyMedium,
+                  style: SocialRecipeAppTheme.lightTextTheme.bodyMedium,
                 ),
               ],
             )
