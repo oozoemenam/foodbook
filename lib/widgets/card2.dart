@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../models/models.dart';
 import '../theme.dart';
 import 'widgets.dart';
 
 class Card2 extends StatelessWidget {
-  const Card2({super.key});
+  final ExploreRecipe recipe;
+
+  const Card2({super.key, required this.recipe});
 
   @override
   Widget build(BuildContext context) {

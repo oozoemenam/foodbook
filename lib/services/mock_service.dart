@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import '../models/models.dart';
 
 // Mock recipe service that grabs sample json data to mock recipe request/response
-class MockFooderlichService {
+class MockService {
   // Batch request that gets both today recipes and friend's feed
   Future<ExploreData> getExploreData() async {
     final todayRecipes = await _getTodayRecipes();
@@ -14,21 +14,21 @@ class MockFooderlichService {
     return ExploreData(todayRecipes, friendPosts);
   }
 
-  // Get sample explore recipes json to display in ui
-  Future<List<ExploreRecipe>> _getTodayRecipes() async {
+  // Get the sample recipe json to display in ui
+  Future<List<SimpleRecipe>> getRecipes() async {
     // Simulate api request wait time
     await Future.delayed(const Duration(milliseconds: 1000));
     // Load json from file system
     final dataString =
-        await _loadAsset('assets/sample_data/sample_explore_recipes.json');
+        await _loadAsset('assets/sample_data/sample_recipes.json');
     // Decode to json
     final Map<String, dynamic> json = jsonDecode(dataString);
 
-    // Go through each recipe and convert json to ExploreRecipe object.
+    // Go through each recipe and convert json to SimpleRecipe object.
     if (json['recipes'] != null) {
-      final recipes = <ExploreRecipe>[];
+      final recipes = <SimpleRecipe>[];
       json['recipes'].forEach((v) {
-        recipes.add(ExploreRecipe.fromJson(v));
+        recipes.add(SimpleRecipe.fromJson(v));
       });
       return recipes;
     } else {
@@ -58,21 +58,21 @@ class MockFooderlichService {
     }
   }
 
-  // Get the sample recipe json to display in ui
-  Future<List<SimpleRecipe>> getRecipes() async {
+  // Get sample explore recipes json to display in ui
+  Future<List<ExploreRecipe>> _getTodayRecipes() async {
     // Simulate api request wait time
     await Future.delayed(const Duration(milliseconds: 1000));
     // Load json from file system
     final dataString =
-        await _loadAsset('assets/sample_data/sample_recipes.json');
+        await _loadAsset('assets/sample_data/sample_explore_recipes.json');
     // Decode to json
     final Map<String, dynamic> json = jsonDecode(dataString);
 
-    // Go through each recipe and convert json to SimpleRecipe object.
+    // Go through each recipe and convert json to ExploreRecipe object.
     if (json['recipes'] != null) {
-      final recipes = <SimpleRecipe>[];
+      final recipes = <ExploreRecipe>[];
       json['recipes'].forEach((v) {
-        recipes.add(SimpleRecipe.fromJson(v));
+        recipes.add(ExploreRecipe.fromJson(v));
       });
       return recipes;
     } else {

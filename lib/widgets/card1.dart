@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+
+import '../models/models.dart';
 import '../theme.dart';
 
 class Card1 extends StatelessWidget {
-  const Card1({super.key});
+  final ExploreRecipe recipe;
+
+  const Card1({super.key, required this.recipe});
 
   final String category = 'Editor\'s Choice';
   final String title = 'The Art of Dough';

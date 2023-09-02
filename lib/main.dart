@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:platemate/home.dart';
-import 'package:platemate/theme.dart';
+
+import 'home.dart';
+import 'theme.dart';
 
 void main() {
   runApp(const Platemate());
@@ -18,6 +19,4 @@ class Platemate extends StatelessWidget {
       home: const Home(),
     );
   }
-
-
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:platemate/widgets/card1.dart';
-import 'package:platemate/widgets/card2.dart';
-import 'package:platemate/widgets/card3.dart';
+
+import 'screens/explore_screen.dart';
+import 'widgets/card2.dart';
+import 'widgets/card3.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -11,20 +12,15 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int _selectedIndex = 0;
-
   static List<Widget> pages = <Widget>[
-    const Card1(),
-    const Card2(),
-    const Card3(),
+    // const Card1(),
+    ExploreScreen(),
+    // const Card2(),
+    // const Card3(),
     Container(color: Colors.blue),
   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -56,5 +52,11 @@ class _HomeState extends State<Home> {
         ],
       ),
     );
+  }
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
   }
 }
