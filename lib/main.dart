@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'home.dart';
+import 'models/models.dart';
 import 'theme.dart';
 
 void main() {
@@ -14,9 +16,13 @@ class SocialRecipeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = SocialRecipeAppTheme.dark();
     return MaterialApp(
-      theme: theme,
-      title: 'SocialRecipeApp',
-      home: const Home(),
-    );
+        theme: theme,
+        title: 'SocialRecipeApp',
+        home: MultiProvider(
+          providers: [
+            ChangeNotifierProvider(create: (context) => TabManager()),
+          ],
+          child: const Home(),
+        ));
   }
 }
