@@ -14,7 +14,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  static List<Widget> screens = <Widget>[
+  static List<Widget> pages = <Widget>[
     ExploreScreen(),
     RecipesScreen(),
     const GroceryScreen(),
@@ -30,8 +30,7 @@ class _HomeState extends State<Home> {
             style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
-        // Replace body
-        body: screens[tabManager.selectedTab],
+        body: IndexedStack(index: tabManager.selectedTab, children: pages,),
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor:
               Theme.of(context).textSelectionTheme.selectionColor,
