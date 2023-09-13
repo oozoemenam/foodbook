@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'models/models.dart';
-import 'screens/explore_screen.dart';
-import 'screens/grocery_screen.dart';
-import 'screens/recipes_screen.dart';
+import '../models/models.dart';
+import 'explore_screen.dart';
+import 'grocery_screen.dart';
+import 'recipes_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -30,7 +30,10 @@ class _HomeState extends State<Home> {
             style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
-        body: IndexedStack(index: tabManager.selectedTab, children: pages,),
+        body: IndexedStack(
+          index: tabManager.selectedTab,
+          children: pages,
+        ),
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor:
               Theme.of(context).textSelectionTheme.selectionColor,
