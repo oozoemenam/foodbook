@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'models/models.dart';
-import 'screens/home.dart';
-import 'screens/login_screen.dart';
+import 'navigation/app_router.dart';
 import 'theme.dart';
 
 void main() async {
@@ -28,7 +27,11 @@ class SocialRecipeApp extends StatefulWidget {
 class _SocialRecipeAppState extends State<SocialRecipeApp> {
   late final _groceryManager = GroceryManager();
   late final _profileManager = ProfileManager();
-  // TODO: Initialize AppRouter
+  late final _appRouter = AppRouter(
+    widget.appStateManager,
+    _profileManager,
+    _groceryManager,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -47,11 +50,13 @@ class _SocialRecipeAppState extends State<SocialRecipeApp> {
             theme = SocialRecipeAppTheme.light();
           }
 
-          // TODO: Replace with Router
-          return MaterialApp(
+          final router = _appRouter.router;
+          return MaterialApp.router(
             theme: theme,
             title: 'SocialRecipeApp',
-            home: const LoginScreen(),
+            routerDelegate: router.routerDelegate,
+            routeInformationParser: router.routeInformationParser,
+            routeInformationProvider: router.routeInformationProvider,
           );
         },
       ),

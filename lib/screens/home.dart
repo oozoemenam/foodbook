@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../models/models.dart';
@@ -7,7 +8,12 @@ import 'grocery_screen.dart';
 import 'recipes_screen.dart';
 
 class Home extends StatefulWidget {
-  const Home({super.key});
+  const Home({
+    super.key,
+    required this.currentTab
+  });
+
+  final int currentTab;
 
   @override
   State<Home> createState() => _HomeState();
@@ -29,17 +35,26 @@ class _HomeState extends State<Home> {
             'SocialRecipeApp',
             style: Theme.of(context).textTheme.titleLarge,
           ),
+          actions: [
+            profileButton(widget.currentTab),
+          ]
         ),
         body: IndexedStack(
-          index: tabManager.selectedTab,
+          index: widget.currentTab,
           children: pages,
         ),
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor:
               Theme.of(context).textSelectionTheme.selectionColor,
-          currentIndex: tabManager.selectedTab,
+          currentIndex: widget.currentTab,
           onTap: (index) {
-            tabManager.goToTab(index);
+            Provider.of<AppStateManager>(context, listen: false).goToTab(index);
+            context.goNamed(
+              'home',
+              pathParameters: {
+                'tab': '$index',
+              }
+            );
           },
           items: const [
             BottomNavigationBarItem(
@@ -58,5 +73,22 @@ class _HomeState extends State<Home> {
         ),
       );
     });
+  }
+
+  Widget profileButton(int currentTab) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 16.0),
+      child: GestureDetector(
+        child: const CircleAvatar(
+          backgroundColor: Colors.transparent,
+          backgroundImage: AssetImage(
+            'assets/profile_pics/person_stef.jpeg',
+          ),
+        ),
+        onTap: () {
+          // TODO: Navigate to profile screen
+        },
+      ),
+    );
   }
 }

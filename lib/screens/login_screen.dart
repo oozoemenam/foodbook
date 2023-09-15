@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../models/app_state_manager.dart';
 
 class LoginScreen extends StatelessWidget {
   final String? username;
@@ -56,7 +59,8 @@ class LoginScreen extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
         onPressed: () async {
-          // TODO: Initiate Login
+          Provider.of<AppStateManager>(context, listen: false)
+              .login('username', 'password');
         },
       ),
     );
