@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 
+import '../models/app_state_manager.dart';
 import '../models/grocery_item.dart';
 import '../widgets/grocery_tile.dart';
 
@@ -320,7 +322,13 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
                     TextButton(
                       child: const Text('Save'),
                       onPressed: () {
-                        Navigator.of(context).pop();
+                        // Navigator.of(context).pop();
+                        context.goNamed(
+                          'home',
+                          pathParameters: {
+                            'tab': '${SocialRecipeAppTab.toBuy}',
+                          },
+                        );
                       },
                     ),
                   ],

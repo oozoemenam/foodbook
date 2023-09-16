@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
 
 import '../models/models.dart';
-import '../screens/home.dart';
-import '../screens/login_screen.dart';
-import '../screens/onboarding_screen.dart';
+import '../screens/screens.dart';
 
 class AppRouter {
   final AppStateManager appStateManager;
@@ -42,9 +39,44 @@ class AppRouter {
             key: state.pageKey, currentTab: tab,
           );
         },
-        routes: const [
+        routes: [
+          GoRoute(
+            name: 'item',
+            path: 'item/:id',
+            builder: (context, state) {
+              final itemId = state.pathParameters['id'] ?? '';
+              final item = groceryManager.getGroceryItem(itemId);
+              return GroceryItemScreen(
+                originalItem: item,
+                onCreate: (item) {
+                  groceryManager.addItem(item);
+                },
+                onUpdate: (item) {
+                  groceryManager.updateItem(item);
+                },
+              );
+            }
+          ),
+          GoRoute(
+            name: 'profile',
+            path: 'profile',
+            builder: (context, state) {
+              final tab = int.tryParse(state.pathParameters['tab'] ?? '') ?? 0;
+              return ProfileScreen(
+                user: profileManager.getUser,
+                currentTab: tab,
+              );
+            },
+            // routes: [
+            //   GoRoute(
+            //     name: 'rw',
+            //     path: 'rw',
+            //     builder: (context, state) => const WebViewScreen(),
+            //   )
+            // ],
+          ),
           // TODO: Add Subroutes
-        ]
+        ],
       ),
     ],
     errorPageBuilder: (context, state) {
