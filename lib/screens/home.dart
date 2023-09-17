@@ -28,51 +28,48 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<TabManager>(builder: (context, tabManager, child) {
-      return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'SocialRecipeApp',
-            style: Theme.of(context).textTheme.titleLarge,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'SocialRecipeApp',
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
+        actions: [
+          profileButton(widget.currentTab),
+        ]
+      ),
+      body: IndexedStack(
+        index: widget.currentTab,
+        children: pages,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
+        currentIndex: widget.currentTab,
+        onTap: (index) {
+          Provider.of<AppStateManager>(context, listen: false).goToTab(index);
+          context.goNamed(
+            'home',
+            pathParameters: {
+              'tab': '$index',
+            },
+          );
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.explore),
+            label: 'Explore',
           ),
-          actions: [
-            profileButton(widget.currentTab),
-          ]
-        ),
-        body: IndexedStack(
-          index: widget.currentTab,
-          children: pages,
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor:
-              Theme.of(context).textSelectionTheme.selectionColor,
-          currentIndex: widget.currentTab,
-          onTap: (index) {
-            Provider.of<AppStateManager>(context, listen: false).goToTab(index);
-            context.goNamed(
-              'home',
-              pathParameters: {
-                'tab': '$index',
-              }
-            );
-          },
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.explore),
-              label: 'Explore',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.book),
-              label: 'Recipes',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.list),
-              label: 'To Buy',
-            ),
-          ],
-        ),
-      );
-    });
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book),
+            label: 'Recipes',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list),
+            label: 'To Buy',
+          ),
+        ],
+      ),
+    );
   }
 
   Widget profileButton(int currentTab) {

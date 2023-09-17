@@ -39,8 +39,6 @@ class EmptyGroceryScreen extends StatelessWidget {
               ),
               color: Colors.green,
               onPressed: () {
-                // Provider.of<TabManager>(context, listen: false)
-                // .goToRecipes();
                 context.goNamed(
                   'home',
                   pathParameters: {

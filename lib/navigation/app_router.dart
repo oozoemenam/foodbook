@@ -18,7 +18,7 @@ class AppRouter {
   late final router = GoRouter(
     debugLogDiagnostics: true, // TODO: remove for production
     refreshListenable: appStateManager,
-    initialLocation: '/login',
+    initialLocation: '/home',
     routes: [
       GoRoute(
         name: 'login',
