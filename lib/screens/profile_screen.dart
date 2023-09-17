@@ -12,8 +12,12 @@ import '../widgets/circle_image.dart';
 class ProfileScreen extends StatefulWidget {
   final User user;
   final int currentTab;
-  const ProfileScreen(
-      {super.key, required this.user, required this.currentTab});
+
+  const ProfileScreen({
+    super.key,
+    required this.user,
+    required this.currentTab
+  });
 
   @override
   ProfileScreenState createState() => ProfileScreenState();
